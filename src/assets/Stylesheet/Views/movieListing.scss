@@ -1,0 +1,67 @@
+.movie-listing__container {
+  padding: 5% 0;
+  .left-panel {
+    .movie-poster {
+      height: 350px;
+    }
+    .production-details {
+      font-size: 14px;
+      color: #8d8b8b;
+      margin-top: 20px;
+    }
+  }
+  .right-panel {
+    .title {
+      color: #1d1d1d;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .movie-details {
+      font-size: 14px;
+      color: #8d8b8b;
+      & > div:not(:last-child) {
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px solid #8d8b8b;
+      }
+    }
+    .imdb-ratings {
+      display: flex;
+      align-items: baseline;
+      margin-top: 10px;
+      & > div {
+        margin-right: 10px;
+      }
+      svg {
+        color: red;
+      }
+      .rating {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .votes {
+        font-size: 14px;
+        color: #1d1d1d;
+      }
+    }
+    .tabs__wrapper {
+      margin-top: 4%;
+      .tab-content {
+        padding: 0 1%;
+        font-size: 14px;
+        color: #1d1d1d;
+        .label {
+          font-weight: bold;
+          font-size: 18px;
+          margin: 30px 0 10px;
+        }
+        .rating-row {
+          font-size: 16px;
+          margin-top: 10px;
+          color: #1d1d1d;
+        }
+      }
+    }
+  }
+}
