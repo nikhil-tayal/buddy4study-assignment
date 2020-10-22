@@ -6,6 +6,8 @@ import { ImCalendar, ImFire } from "react-icons/im";
 import { BiTimeFive } from "react-icons/bi";
 import { FaRegHandPointRight } from "react-icons/fa";
 import { Tabs, Tab } from "react-bootstrap";
+import LoaderModal from "../../components/LoaderModal/LoaderModal";
+import { isEmpty } from "lodash";
 class MovieListing extends React.Component {
   componentDidMount() {
     this.props.requestApiMovieData();
@@ -13,9 +15,10 @@ class MovieListing extends React.Component {
 
   render() {
     const { movieData = {} } = this.props;
-    // console.log(movie);
+    console.log(movieData);
     return (
       <div className="movie-listing__container">
+        <LoaderModal status={isEmpty(movieData)} />
         <div className="container">
           <div className="row no-gutters">
             <div className="col-md-3 left-panel">
